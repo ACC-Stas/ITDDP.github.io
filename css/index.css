@@ -1,7 +1,16 @@
-.info-section {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+@media (min-width: 707px) {
+    .info-section {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 706px) {
+    .info-section {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .welcome-text {
