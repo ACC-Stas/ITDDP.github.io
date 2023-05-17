@@ -11,7 +11,7 @@ const PlayView = {
                 <div class="play-username" id="opponent-username">(<span id="opponent-rating"></span>)</div>
             </div>
             <div class="game">
-                <canvas></canvas>
+                <img src="../img/board.png" class="board-img">
                 <div class="board"></div>
             </div>
             <div class="my-info row">
@@ -89,13 +89,13 @@ const PlayView = {
 
             window.onload = function () {
 
-                var canvas = document.getElementsByTagName('canvas')[0];
-                var ctx = canvas.getContext('2d');
+                // var canvas = document.getElementsByTagName('canvas')[0];
+                // var ctx = canvas.getContext('2d');
 
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
+                // canvas.width = window.innerWidth;
+                // canvas.height = window.innerHeight;
 
-                drawBoard(ctx);
+                // drawBoard(ctx);
 
                 createGrid();
 
@@ -105,6 +105,7 @@ const PlayView = {
                     console.log('FIREBASE changed');
                     useFEN(snapShot.val().FEN);
                     updateGameBy(board);
+                    // drawBoard(ctx);
                     paintBoard();
                 });
 
@@ -139,6 +140,7 @@ const PlayView = {
                             RoomService.updateFen(roomId, fen_str);
                         }
 
+                        // drawBoard(ctx);
                         paintBoard();
                     }
 

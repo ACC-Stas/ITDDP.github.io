@@ -65,34 +65,87 @@ body {
     visibility: visible;
 }
 
-canvas {
-	position: absolute;
-	z-index: -10;
+@media (min-width: 700px) {
+	.box {
+		width: 48px;
+		height: 48px;
+		margin: 1px;
+		float: left;
+		border-radius: 100%;
+		box-sizing: border-box;
+		cursor: default;
+		box-shadow: 3px 0px 5px #755F31;
+	}
+
+	.rowgo {
+		width: 500px;
+		height: 50px;
+		margin: 0;
+		clear: both;
+		overflow: hidden;
+	}
+
+	.board {
+		width: 500px;
+		height: 500px;
+		padding: 20px 0 0 35px;
+	}
+
+	.game {
+		width: 500px;
+		height: 500px;
+	}
+
+	.board-img {
+		position: absolute;
+		width: 480px;
+		height: 480px;
+		margin-left: 20px;
+		z-index: -10;
+	}
 }
 
-.board {
-	/*position: absolute;*/
-	width: 500px;
-	height: 500px;
-	padding: 20px 0 0 35px;
+
+@media (max-width: 700px) {
+	.box {
+		width: 33px;
+		height: 33px;
+		margin: 1px;
+		float: left;
+		border-radius: 100%;
+		box-sizing: border-box;
+		cursor: default;
+		box-shadow: 3px 0px 5px #755F31;
+	}
+
+	.rowgo {
+		width: 315px;
+		height: 35px;
+		margin: 0;
+		clear: both;
+		overflow: hidden;
+	}
+
+	.board {
+		width: 340px;
+		height: 340px;
+		padding: 15px 0 0 34px;
+	}
+
+	.game {
+		width: 350px;
+		height: 350px;
+	}
+
+	.board-img {
+		position: absolute;
+		width: 340px;
+		height: 340px;
+		margin-left: 20px;
+		z-index: -10;
+	}
 }
 
-.rowgo {
-	margin: 0;
-	clear: both;
-	overflow: hidden;
-}
-
-.box {
-	width: 48px;
-	height: 48px;
-	margin: 1px;
-	float: left;
-	border-radius: 100%;
-	box-sizing: border-box;
-	cursor: default;
-	box-shadow: 3px 0px 5px #755F31;
-}
 
 .hide {
 	border: none;
