@@ -11,7 +11,7 @@ const PlayView = {
                 <div class="play-username" id="opponent-username">(<span id="opponent-rating"></span>)</div>
             </div>
             <div class="game">
-                <img src="../img/board.png" class="board-img">
+                <img src="./img/board.png" class="board-img">
                 <div class="board"></div>
             </div>
             <div class="my-info row">
