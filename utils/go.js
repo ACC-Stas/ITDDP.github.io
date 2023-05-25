@@ -136,15 +136,18 @@ function clearBoard(board) {
 
 //Update game by selected board
 function updateGameBy(board) {
-    deleteBox($('.box'));
+    const boxes = document.querySelectorAll('[id^=box]');
+    for (i = 0; i < boxes.length; i++) {
+        deleteBox(boxes[i])
+    }
 
     for (var i = 0; i < boardSize; i++) {
         for (var j = 0; j < boardSize; j++) {
             if (board[i][j] !== EMPTY) {
-                var box = $('#box-' + i + '-' + j);
+                var box = document.querySelector('[id^=box-' + i + '-' + j + ']');
 
-                box.addClass(board[i][j] === 0 ? 'black' : 'white');
-                box.removeClass('hide');
+                box.classList.add(board[i][j] === 0 ? 'black' : 'white');
+                box.classList.remove('hide');
             }
         }
     }
@@ -194,94 +197,17 @@ function resetCheckBoard() {
     }
 }
 
-//Reset board to start new game
-function resetBoard(board) {
-    for (var i = 0; i < boardSize; i++) {
-        for (var j = 0; j < boardSize; j++) {
-            board[i][j] = EMPTY;
-        }
-    }
-}
-
 function deleteBox(box) {
-    box.removeClass('black');
-    box.removeClass('white');
-    box.addClass('hide');
-}
-
-function reset() {
-    deleteBox($('.box'));
-
-    player = 0;
-
-    resetBoard(board);
-    resetBoard(testBoard);
-    resetBoard(backupBoard);
+    box.classList.remove('black');
+    box.classList.remove('white');
+    box.classList.add('hide');
 }
 
 function showInvalidMove(x, y) {
-    var box = $('#box-' + x + '-' + y);
+    var box = document.querySelector('[id^=box-' + x + '-' + y + ']');
 
-    box.addClass('invalid');
+    box.classList.add('invalid');
     setTimeout(function () {
-        box.removeClass('invalid');
+        box.classList.remove('invalid');
     }, 50);
-}
-
-//Create grid board game
-function createGrid() {
-    $('.board').empty();
-
-    for (var i = 0; i < boardSize; i++) {
-        $('.board').append('<div class=\"rowgo\" id=\"row-' + i + '\">');
-        for (var j = 0; j < boardSize; j++) {
-            $('#row-' + i).append('<div class=\"box hide\" id=\"box-' + i + '-' + j + '\">');
-        }
-    }
-}
-
-//Draw board functions
-function drawBoard(ctx) {
-
-    var x = rootX, y = rootY;
-
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-
-    ctx.fillStyle = '#F2B06D';
-    ctx.fillRect(rootX - 40, rootY - 40, 80 + boxSize * (boardSize - 1), 80 + boxSize * (boardSize - 1));
-
-    for (var i = 0; i < boardSize; i++) {
-        drawLine(ctx, x, y, 0, boxSize * (boardSize - 1));
-        x += boxSize;
-    }
-    x = rootX, y = rootY;
-    for (var i = 0; i < boardSize; i++) {
-        drawLine(ctx, x, y, boxSize * (boardSize - 1), 0);
-        y += boxSize;
-    }
-
-    drawLine(ctx, rootX - 40, rootY - 40, 0, 80 + boxSize * (boardSize - 1));
-    drawLine(ctx, rootX + 40 + boxSize * (boardSize - 1), rootY - 40, 0, 80 + boxSize * (boardSize - 1));
-    drawLine(ctx, rootX - 40, rootY - 40, 80 + boxSize * (boardSize - 1), 0);
-    drawLine(ctx, rootX - 40, rootY + 40 + boxSize * (boardSize - 1), 80 + boxSize * (boardSize - 1), 0);
-
-    ctx.fillStyle = '#000';
-    drawPoint(ctx, 2, 2);
-    drawPoint(ctx, 2, 6);
-    drawPoint(ctx, 6, 2);
-    drawPoint(ctx, 6, 6);
-    drawPoint(ctx, 4, 4);
-}
-
-function drawLine(ctx, x, y, a, b) {
-    ctx.moveTo(x, y);
-    ctx.lineTo(x + a, y + b);
-    ctx.stroke();
-}
-
-function drawPoint(ctx, x, y) {
-    ctx.beginPath();
-    ctx.arc(rootX + boxSize * x, rootY + boxSize * y, 5, 0, 2 * Math.PI);
-    ctx.fill();
 }

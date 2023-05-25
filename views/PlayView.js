@@ -12,7 +12,109 @@ const PlayView = {
             </div>
             <div class="game">
                 <img src="./img/board.png" class="board-img">
-                <div class="board"></div>
+                
+                <div class="board" id="board">
+                    <div class="rowgo" id="row-0">
+                        <div class="box hide" id="box-0-0"></div>
+                        <div class="box hide" id="box-0-1"></div>
+                        <div class="box hide" id="box-0-2"></div>
+                        <div class="box hide" id="box-0-3"></div>
+                        <div class="box hide" id="box-0-4"></div>
+                        <div class="box hide" id="box-0-5"></div>
+                        <div class="box hide" id="box-0-6"></div>
+                        <div class="box hide" id="box-0-7"></div>
+                        <div class="box hide" id="box-0-8"></div>
+                    </div>
+                    <div class="rowgo" id="row-1">
+                        <div class="box hide" id="box-1-0"></div>
+                        <div class="box hide" id="box-1-1"></div>
+                        <div class="box hide" id="box-1-2"></div>
+                        <div class="box hide" id="box-1-3"></div>
+                        <div class="box hide" id="box-1-4"></div>
+                        <div class="box hide" id="box-1-5"></div>
+                        <div class="box hide" id="box-1-6"></div>
+                        <div class="box hide" id="box-1-7"></div>
+                        <div class="box hide" id="box-1-8"></div>
+                    </div>
+                    <div class="rowgo" id="row-2">
+                        <div class="box hide" id="box-2-0"></div>
+                        <div class="box hide" id="box-2-1"></div>
+                        <div class="box hide" id="box-2-2"></div>
+                        <div class="box hide" id="box-2-3"></div>
+                        <div class="box hide" id="box-2-4"></div>
+                        <div class="box hide" id="box-2-5"></div>
+                        <div class="box hide" id="box-2-6"></div>
+                        <div class="box hide" id="box-2-7"></div>
+                        <div class="box hide" id="box-2-8"></div>
+                    </div>
+                    <div class="rowgo" id="row-3">
+                        <div class="box hide" id="box-3-0"></div>
+                        <div class="box hide" id="box-3-1"></div>
+                        <div class="box hide" id="box-3-2"></div>
+                        <div class="box hide" id="box-3-3"></div>
+                        <div class="box hide" id="box-3-4"></div>
+                        <div class="box hide" id="box-3-5"></div>
+                        <div class="box hide" id="box-3-6"></div>
+                        <div class="box hide" id="box-3-7"></div>
+                        <div class="box hide" id="box-3-8"></div>
+                    </div>
+                    <div class="rowgo" id="row-4">
+                        <div class="box hide" id="box-4-0"></div>
+                        <div class="box hide" id="box-4-1"></div>
+                        <div class="box hide" id="box-4-2"></div>
+                        <div class="box hide" id="box-4-3"></div>
+                        <div class="box hide" id="box-4-4"></div>
+                        <div class="box hide" id="box-4-5"></div>
+                        <div class="box hide" id="box-4-6"></div>
+                        <div class="box hide" id="box-4-7"></div>
+                        <div class="box hide" id="box-4-8"></div>
+                    </div>
+                    <div class="rowgo" id="row-5">
+                        <div class="box hide" id="box-5-0"></div>
+                        <div class="box hide" id="box-5-1"></div>
+                        <div class="box hide" id="box-5-2"></div>
+                        <div class="box hide" id="box-5-3"></div>
+                        <div class="box hide" id="box-5-4"></div>
+                        <div class="box hide" id="box-5-5"></div>
+                        <div class="box hide" id="box-5-6"></div>
+                        <div class="box hide" id="box-5-7"></div>
+                        <div class="box hide" id="box-5-8"></div>
+                    </div>
+                    <div class="rowgo" id="row-6">
+                        <div class="box hide" id="box-6-0"></div>
+                        <div class="box hide" id="box-6-1"></div>
+                        <div class="box hide" id="box-6-2"></div>
+                        <div class="box hide" id="box-6-3"></div>
+                        <div class="box hide" id="box-6-4"></div>
+                        <div class="box hide" id="box-6-5"></div>
+                        <div class="box hide" id="box-6-6"></div>
+                        <div class="box hide" id="box-6-7"></div>
+                        <div class="box hide" id="box-6-8"></div>
+                    </div>
+                    <div class="rowgo" id="row-7">
+                        <div class="box hide" id="box-7-0"></div>
+                        <div class="box hide" id="box-7-1"></div>
+                        <div class="box hide" id="box-7-2"></div>
+                        <div class="box hide" id="box-7-3"></div>
+                        <div class="box hide" id="box-7-4"></div>
+                        <div class="box hide" id="box-7-5"></div>
+                        <div class="box hide" id="box-7-6"></div>
+                        <div class="box hide" id="box-7-7"></div>
+                        <div class="box hide" id="box-7-8"></div>
+                    </div>
+                    <div class="rowgo" id="row-8">
+                        <div class="box hide" id="box-8-0"></div>
+                        <div class="box hide" id="box-8-1"></div>
+                        <div class="box hide" id="box-8-2"></div>
+                        <div class="box hide" id="box-8-3"></div>
+                        <div class="box hide" id="box-8-4"></div>
+                        <div class="box hide" id="box-8-5"></div>
+                        <div class="box hide" id="box-8-6"></div>
+                        <div class="box hide" id="box-8-7"></div>
+                        <div class="box hide" id="box-8-8"></div>
+                    </div>
+                </div>
+                
             </div>
             <div class="my-info row">
                 <img class="avatar-small" id="my-avatar">
@@ -21,6 +123,7 @@ const PlayView = {
             </div>
         </section>`;
     },
+
     afterRender: async () => {
         (await async function () {
             const logout_link = document.getElementById('logout_link');
@@ -89,95 +192,47 @@ const PlayView = {
 
             window.onload = function () {
 
-                // var canvas = document.getElementsByTagName('canvas')[0];
-                // var ctx = canvas.getContext('2d');
-
-                // canvas.width = window.innerWidth;
-                // canvas.height = window.innerHeight;
-
-                // drawBoard(ctx);
-
-                createGrid();
-
-                paintBoard();
-
                 firebase.database().ref("rooms").child(roomId).on("value", (snapShot) => {
                     console.log('FIREBASE changed');
                     useFEN(snapShot.val().FEN);
                     updateGameBy(board);
-                    // drawBoard(ctx);
-                    paintBoard();
                 });
 
-                $('.box').on('click', function () {
-                    if ($(this).hasClass('hide')) {
-                        var box = $(this).attr('id').split('-');
-                        var x = parseInt(box[1]);
-                        var y = parseInt(box[2]);
+                const boxes = document.querySelectorAll('[id^=box]');
+                for (i = 0; i < boxes.length; i++) {
+                    boxes[i].addEventListener('click', function () {
+                        if (this.classList.contains('hide')) {
+                            var box = this.id.match('box-(\\d+)-(\\d+)');
+                            var x = parseInt(box[1]);
+                            var y = parseInt(box[2]);
 
-                        testBoard[x][y] = player;
-                        clearBoard(testBoard);
+                            testBoard[x][y] = player;
+                            clearBoard(testBoard);
 
-                        var is_black_turn = player === 0;
+                            var is_black_turn = player === 0;
 
-                        if (invalidTestBoard() || invalidMove(x, y) || (is_black_user !== is_black_turn)) {
-                            showInvalidMove(x, y);
-                            copyBoard(testBoard, board);
-                            resetCheckBoard();
-                        } else { //Valid move
+                            if (invalidTestBoard() || invalidMove(x, y) || (is_black_user !== is_black_turn)) {
+                                showInvalidMove(x, y);
+                                copyBoard(testBoard, board);
+                                resetCheckBoard();
+                            } else { //Valid move
 
-                            copyBoard(backupBoard, board);
+                                copyBoard(backupBoard, board);
 
-                            copyBoard(board, testBoard);
-                            updateGameBy(board);
+                                copyBoard(board, testBoard);
+                                updateGameBy(board);
 
-                            $(this).addClass(player === 0 ? 'black' : 'white');
-                            $(this).removeClass('hide');
+                                this.classList.add(player === 0 ? 'black' : 'white');
+                                this.classList.remove('hide');
 
-                            player === 0 ? player++ : player--;
+                                player === 0 ? player++ : player--;
 
-                            let fen_str = calcFEN();
-                            RoomService.updateFen(roomId, fen_str);
+                                let fen_str = calcFEN();
+                                RoomService.updateFen(roomId, fen_str);
+                            }
                         }
 
-                        // drawBoard(ctx);
-                        paintBoard();
-                    }
-
-                });
-
-                function paintBoard() {
-                    var test = $('#test');
-                    test.html("current board<br>");
-                    for (var i = 0; i < 9; i++) {
-                        for (var j = 0; j < 9; j++) {
-                            if (board[i][j] === EMPTY)
-                                test.append('*   ');
-                            else
-                                test.append(board[i][j] + '    ');
-                        }
-                        test.append('<br>');
-                    }
-                    test.append('backup board<br>');
-                    for (var i = 0; i < 9; i++) {
-                        for (var j = 0; j < 9; j++) {
-                            if (backupBoard[i][j] === EMPTY)
-                                test.append('*   ');
-                            else
-                                test.append(backupBoard[i][j] + '    ');
-                        }
-                        test.append('<br>');
-                    }
-                    test.append('test board<br>');
-                    for (var i = 0; i < 9; i++) {
-                        for (var j = 0; j < 9; j++) {
-                            if (testBoard[i][j] === EMPTY)
-                                test.append('*   ');
-                            else
-                                test.append(testBoard[i][j] + '    ');
-                        }
-                        test.append('<br>');
-                    }
+                    });
                 }
             }
 
